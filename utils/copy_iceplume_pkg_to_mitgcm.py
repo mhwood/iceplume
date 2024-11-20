@@ -883,7 +883,7 @@ def update_obcs_balance_flow(obcs_dir, code_path):
                      '        ENDDO',
                      '        CALL GLOBAL_SUM_TILE_RL( tileFlow, addMassMassFlux, myThid )',
                      '        IF ( debugLevel.GE.debLevC ) THEN',
-                     '          WRITE(msgBuf,\'(A,I9,A,1P1E16.8)\') \'OBCS_balance (it=\'',
+                     '          WRITE(msgBuf,\'(A,I9,A,1P1E16.8)\') \'OBCS_balance (it=\',',
                      '     &       myIter, \' ) correct for addMassMassFlux:\',',
                      '     &       addMassMassFlux',
                      '          CALL PRINT_MESSAGE( msgBuf, standardMessageUnit,',
