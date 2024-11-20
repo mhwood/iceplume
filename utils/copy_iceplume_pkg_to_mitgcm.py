@@ -339,15 +339,6 @@ def update_apply_forcing(src_dir, code_path):
         t_lines = add_new_lines(t_lines, indicator, skip_line, add_lines)
         s_lines = add_new_lines(s_lines, indicator, skip_line, add_lines)
 
-        # add the check code
-        indicator = '      INTEGER myThid'
-        skip_line = 0
-        add_lines = ['#ifdef ALLOW_ICEPLUME',
-                     '      _RL     tmpVar(1-OLx:sNx+OLx,1-OLy:sNy+OLy)',
-                     '#endif /* ALLOW_ICEPLUME */']
-        t_lines = add_new_lines(t_lines, indicator, skip_line, add_lines)
-        s_lines = add_new_lines(s_lines, indicator, skip_line, add_lines)
-
         indicator = '#ifdef ALLOW_ADDFLUID'
         skip_line = 0
         add_lines = ['',
@@ -402,6 +393,14 @@ def update_apply_forcing(src_dir, code_path):
                      '     I                   k, bi, bj, myTime, myIter, myThid )',
                      '#endif /* ALLOW_ICEPLUME */']
         t_lines = add_new_lines(t_lines, indicator, skip_line, add_lines)
+
+        # add the check code
+        indicator = '      INTEGER myThid'
+        skip_line = 0
+        add_lines = ['#ifdef ALLOW_ICEPLUME',
+                     '      _RL     tmpVar(1-OLx:sNx+OLx,1-OLy:sNy+OLy)',
+                     '#endif /* ALLOW_ICEPLUME */']
+        s_lines = add_new_lines(s_lines, indicator, skip_line, add_lines)
 
         indicator = '#ifdef ALLOW_ADDFLUID'
         skip_line = 0
