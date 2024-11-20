@@ -326,7 +326,7 @@ def update_apply_forcing(src_dir, code_path):
             if line[:len('      SUBROUTINE APPLY_FORCING_S(')] == '      SUBROUTINE APPLY_FORCING_S(':
                 apply_forcing_s_start = ll
 
-        pre_lines = lines[:apply_forcing_s_start]
+        pre_lines = lines[:apply_forcing_t_start]
         t_lines = lines[apply_forcing_t_start:apply_forcing_s_start]
         s_lines = lines[apply_forcing_s_start:]
 
@@ -486,7 +486,7 @@ def update_external_forcing(src_dir, code_path):
             if line[:len('      SUBROUTINE EXTERNAL_FORCING_S(')] == '      SUBROUTINE EXTERNAL_FORCING_S(':
                 external_s_start = ll
 
-        pre_lines = lines[:external_s_start]
+        pre_lines = lines[:external_t_start]
         t_lines = lines[external_t_start:external_s_start]
         s_lines = lines[external_s_start:]
 
