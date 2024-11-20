@@ -72,6 +72,7 @@ def update_packages_boot(src_dir, code_path):
             pkg_already_added = True
 
     if not pkg_already_added:
+        print('      - Adding a block to the package boot sequence')
 
         # add the note to the chain
         indicator = '     &          useICEFRONT,'
@@ -278,7 +279,7 @@ def update_boot_sequence_files(mitgcm_path, code_path):
 
     pkg_already_added = update_PARAMS(inc_dir, code_path)
 
-    print('      - Adding a block to the package boot sequence')
+    # print('      - Adding a block to the package boot sequence')
     update_packages_boot(src_dir, code_path)
 
     # print('      - Adding a block to the package check sequence')
@@ -774,7 +775,7 @@ def update_external_fields_load(src_dir, code_path):
         add_lines = ['',
                      '#ifdef ALLOW_ICEPLUME',
                      '      IF (useICEPLUME) THEN',
-                     '       IF ( runoffQsgfile .NE. ' ') THEN',
+                     '       IF ( runoffQsgfile .NE. \' \') THEN',
                      '        CALL READ_REC_XY_RL(',
                      '     &     runoffQsgFile,runoffQsg0,inTime0,myIter,myThid)',
                      '        CALL READ_REC_XY_RL(',
