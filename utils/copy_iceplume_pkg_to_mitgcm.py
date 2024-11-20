@@ -721,7 +721,7 @@ def update_exf_getffields(exf_dir, code_path):
                      '     I     runoffQsg_interpMethod,',
                      '#endif',
                      '     I     myTime, myIter, myThid )',
-                     '      ENDIF'
+                     '      ENDIF',
                      '#endif /* ALLOW_ICEPLUME */']
         lines = add_new_lines(lines, indicator, skip_line, add_lines)
 
