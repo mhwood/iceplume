@@ -6,7 +6,7 @@ The original code was developed by Tom Cowton and others, and is described in th
 
 Cowton, T., Slater, D., Sole, A., Goldberg, D., & Nienow, P. (2015). [Modeling the impact of glacial runoff on fjord circulation and submarine melt rate using a new subgrid‐scale parameterization for glacial plumes]( https://doi.org/10.1002/2014JC010324). Journal of Geophysical Research: Oceans, 120(2), 796-812
 
-The original code can be found on [Zenodo[(https://zenodo.org/records/7086069) and all modifications presented in the code here are from An Nguyen, Kiki Schulz, and me (Mike Wood). 
+The original code can be found on [Zenodo](https://zenodo.org/records/7086069) and all modifications presented in the code here are from An Nguyen, Kiki Schulz, and me (Mike Wood). 
 
 This code relies on the [ODEPACK](https://computing.llnl.gov/projects/odepack) package which was developed by Alan Hindmarsh at LLNL. 
 
